@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RDD 輻射彈演練 3D 導覽 — 龍潭佳安里演練場</title>
+<title>RDD 輻射彈演練 3D 導覽</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -314,7 +314,7 @@ for (const [u,v,a,b,h] of NB){
   m.position.set(p.x,h/2,p.z); m.rotation.y=Math.PI/4; m.castShadow=m.receiveShadow=true; scene.add(m);
   const e=new THREE.LineSegments(new THREE.EdgesGeometry(g), eMat); e.position.copy(m.position); e.rotation.copy(m.rotation); scene.add(e);
 }
-{ // 郵局（中庭式建物）
+{ // 中庭式建物
   const c=NPX(190,228), O=78*NMPP, I=40*NMPP, T=(O-I)/2, h=12, ua=new THREE.Vector3(1,0,-1).normalize(), ub=new THREE.Vector3(1,0,1).normalize();
   for (const [da,db,la,lb] of [[0,(O-T)/2,O,T],[0,-(O-T)/2,O,T],[(O-T)/2,0,T,I],[-(O-T)/2,0,T,I]]){
     const g=new THREE.BoxGeometry(la,h,lb), m=new THREE.Mesh(g,bMat); m.position.copy(c).addScaledVector(ua,da).addScaledVector(ub,db); m.position.y=h/2; m.rotation.y=Math.PI/4; m.castShadow=m.receiveShadow=true; scene.add(m);
